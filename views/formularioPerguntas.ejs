@@ -1,0 +1,23 @@
+<%- include ("partials/header.ejs") %>
+<%- include ("partials/bar.ejs")%>
+<body>
+    <div class="container">
+        <hr>
+        <div class="card mb-5">
+            <div class="card-header">
+                <h2> Cadastro de perguntas</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" action="/perguntas/create">
+                    <input  class="form-control" type="text" name="pergunta" placeholder="Escreva sua pergunta">
+                    <br>
+                    <button class="btn btn-success">Cadastrar</button>
+                </form>
+            </div>
+    
+        </div>
+    </div>
+
+</body>
+
+<%- include ("partials/footer.ejs") %>

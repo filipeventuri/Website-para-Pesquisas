@@ -1,0 +1,27 @@
+<%- include ("partials/header.ejs") %>
+<%- include ("partials/bar.ejs") %>
+<br>
+
+    <% pergunta.forEach((one)=>{ %>
+    
+    <form method="post" action="/respostas/create" >
+        <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <%= one.pergunta %>
+            </div>
+            <div class="card-body">
+                <input type="number" id="resposta" name="resposta" min="1" max="10">
+                <input type="hidden" id="perguntaId" name="perguntaId" value="<%= one.id %>">
+            </div>
+        </div>
+    </div>
+    <div class="text-center container">
+        <button id="send" class="btn btn-success ">Enviar</button>
+    </div>
+        
+    </form>
+    
+    <% }) %>
+
+<%- include ("partials/footer.ejs") %>
